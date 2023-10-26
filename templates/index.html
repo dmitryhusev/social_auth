@@ -1,0 +1,13 @@
+{% block content %}
+
+{% if user.is_authenticated %}
+<p>
+	<a href="{% url 'account_logout' %}">Log Out</a>
+</p>
+Hi {{ user.email }}!
+{% else %}
+<a class="btn btn-success" href="{% url 'account_login' %}">Log In</a>
+<a class="btn btn-success" href="{% url 'account_signup' %}">Sign Up</a>
+<a class="btn btn-success" href="http://127.0.0.1:8003/accounts/google/login/">Google</a>
+{% endif %}
+{% endblock content %}
