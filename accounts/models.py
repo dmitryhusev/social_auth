@@ -39,6 +39,9 @@ class Profiles(AbstractBaseUser, PermissionsMixin):
     @property
     def is_staff(self):
         return self.is_superuser
+    
+    class Meta:
+        verbose_name = "Profile"
 
     username = None
 

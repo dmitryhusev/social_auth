@@ -10,6 +10,7 @@ class UserAdmin(UserAdmin):
     list_filter = ()
     ordering = ("-id",)
     fieldsets = ()
+    search_fields = ("first_name", "last_name", "email")
     add_fieldsets = (
             (
                 None,
